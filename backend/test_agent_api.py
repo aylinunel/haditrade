@@ -77,3 +77,9 @@ def test_library_exports_and_agent_websocket(client):
         ws.send_json({'token': TOKEN, 'runtime': 'replay'})
         kinds = {ws.receive_json()['type'] for _ in range(2)}
         assert kinds <= {'events', 'heartbeat'} and 'events' in kinds
+
+
+def test_root_serves_website_or_build_instructions(client):
+    response = client.get('/')
+    assert response.status_code == 200
+    assert 'Strategy City' in response.text

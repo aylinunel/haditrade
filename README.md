@@ -81,10 +81,10 @@ pip install -r backend/requirements.txt
 export STRATEGY_API_TOKEN='a-long-random-token'
 python -m uvicorn backend.app:app --host 127.0.0.1 --port 8000 --workers 1
 
-# website
-cd web && npm ci && npm run build   # then open http://127.0.0.1:8000
-# or: npm run dev  (http://localhost:5173, proxies /api and /ws to :8000)
+# then open http://127.0.0.1:8000 and sign in with your token
 ```
+
+The built website ships in `web/dist/`, so Node.js is **not** needed to run it. To change the frontend, install Node.js 22+ (`brew install node` on macOS), then run `cd web && npm ci && npm run build`, or `npm run dev` for hot reload at http://localhost:5173 (it proxies `/api` and `/ws` to :8000). CI fails if the committed build is out of date with the source.
 
 In the site, open **Controls → Run replay** to watch the agents learn on a year of real BTC, ETH and SOL bars (Oct 2025 to Oct 2026). Replay speed goes up to about 14 bars per second, so a month replays in roughly 3.5 minutes. Switch to **Live paper → Start live paper trading** to poll Binance's public klines every 10 seconds; no key is needed. To add SPY and QQQ, set `ALPACA_API_KEY_ID` and `ALPACA_API_SECRET_KEY` from your own free Alpaca data account. Set `TRADING_LIVE_AUTOSTART=1` to start the feed on boot.
 

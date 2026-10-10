@@ -18,7 +18,7 @@ import sqlite3
 from typing import Literal
 from fastapi import Depends, FastAPI, Header, HTTPException, Query, WebSocket, WebSocketDisconnect
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import PlainTextResponse
+from fastapi.responses import HTMLResponse, PlainTextResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field, ConfigDict
 from .engine import build_report, load_bars, run_scenario
@@ -479,5 +479,14 @@ async def agent_socket(ws: WebSocket):
 
 
 WEB_DIST = ROOT / 'web' / 'dist'
-if WEB_DIST.exists():
+if (WEB_DIST / 'index.html').exists():
     app.mount('/', StaticFiles(directory=WEB_DIST, html=True), name='web')
+else:
+    @app.get('/', response_class=HTMLResponse, include_in_schema=False)
+    def website_missing():
+        return ('<!doctype html><meta charset="utf-8"><title>Strategy City</title>'
+                '<body style="font-family:system-ui;max-width:640px;margin:10vh auto;padding:0 16px">'
+                '<h1>The API is running, but the website is not built</h1>'
+                '<p><code>web/dist/</code> is missing. Restore the prebuilt site with <code>git checkout -- web/dist</code> '
+                '(or <code>git pull</code>), or rebuild it with Node.js 22+: <code>cd web &amp;&amp; npm ci &amp;&amp; npm run build</code>. '
+                'Then restart the server.</p><p>API docs: <a href="/docs">/docs</a></p></body>')

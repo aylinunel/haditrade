@@ -30,6 +30,8 @@ jobs:
       - run: npm run typecheck
       - run: npm run lint
       - run: npm run build
+      - name: Committed prebuilt site matches the source
+        run: test -z "$(git status --porcelain -- dist)"
   mobile:
     runs-on: ubuntu-latest
     defaults:
