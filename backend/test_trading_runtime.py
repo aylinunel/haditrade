@@ -333,3 +333,10 @@ def test_exported_signals_match_agent_signals_on_real_bars(btc):
         expected = strategy_signals(frame, family)
         assert (freqtrade.targets(frame, family) == expected).all(), family
         assert (lean.targets(frame, family) == expected).all(), family
+
+
+def test_template_does_not_double_punctuation():
+    record = {'proposal': {'symbol': 'BTCUSDT', 'strategy_id': 'sma', 'side': 'long'}, 'outcome': 'rejected',
+              'roles': [{'role': 'senior skeptic', 'decision': {'approved': False, 'reasons': ['Evidence missing.', 'Conflict.']}}]}
+    text = template(record)
+    assert '..' not in text and 'Evidence missing; Conflict.' in text

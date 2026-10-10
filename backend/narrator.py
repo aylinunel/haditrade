@@ -40,7 +40,7 @@ def template(record: Mapping[str, Any]) -> str:
              f"from the {proposal.get('strategy_id', '?')} strategy."]
     for role in record.get('roles', []):
         decision = role.get('decision', {})
-        reasons = '; '.join(str(r) for r in decision.get('reasons', [])[:3]) or 'no reason recorded'
+        reasons = '; '.join(str(r).rstrip('. ') for r in decision.get('reasons', [])[:3]) or 'no reason recorded'
         verb = 'approved' if _verdict(decision) else 'rejected'
         lines.append(f"{ROLE_TITLES.get(role.get('role'), role.get('role'))} {verb}: {reasons}.")
     outcome = record.get('outcome')

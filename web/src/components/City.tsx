@@ -90,7 +90,9 @@ function Tower({ x, z, height, color, lit, signal, position, pulse, selected, ho
         const s = 1 + age * 0.35
         flash.current.scale.set(s, current.current * (1 + age * 0.1), s)
         flash.current.position.y = current.current / 2
-        ;(flash.current.material as THREE.MeshBasicMaterial).opacity = Math.max(0, 0.45 - age * 0.2)
+        // Approvals flash clearly; frequent rejections stay subtle so a fast replay does not flood the city.
+        const peak = pulse?.outcome === 'paper_only_approved' ? 0.5 : 0.14
+        ;(flash.current.material as THREE.MeshBasicMaterial).opacity = Math.max(0, peak * (1 - age / 2.2))
       }
     }
   })
