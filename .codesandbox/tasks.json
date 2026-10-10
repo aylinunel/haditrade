@@ -1,0 +1,24 @@
+{
+  "setupTasks": [
+    {
+      "name": "Install backend",
+      "command": "python3 -m venv .venv && .venv/bin/pip install -r backend/requirements.txt"
+    },
+    {
+      "name": "Build website",
+      "command": "cd web && npm ci && npm run build"
+    }
+  ],
+  "tasks": {
+    "strategy-city": {
+      "name": "Strategy City (paper trading)",
+      "command": "export STRATEGY_API_TOKEN=\"${STRATEGY_API_TOKEN:-$(.venv/bin/python -c 'import secrets; print(secrets.token_urlsafe(18))')}\" && echo \"Sign-in token for this session: $STRATEGY_API_TOKEN\" && .venv/bin/python -m uvicorn backend.app:app --host 0.0.0.0 --port 8000 --workers 1",
+      "runAtStart": true,
+      "preview": { "port": 8000 }
+    },
+    "backend-tests": {
+      "name": "Backend tests",
+      "command": ".venv/bin/python -m pytest backend -q"
+    }
+  }
+}

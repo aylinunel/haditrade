@@ -1,0 +1,19 @@
+node_modules/
+.expo/
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.runtime/
+dist/
+.env
+.env.*
+!.env.example
+*.tsbuildinfo
+.DS_Store
+apps/mobile/ios/
+apps/mobile/android/
+
+# Research fixtures and results are versioned (the host repo ignores *.csv by default)
+!backend/data/*.csv
+!research/quant_backtests/results_csv/*.csv

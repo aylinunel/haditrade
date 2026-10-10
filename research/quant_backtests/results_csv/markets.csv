@@ -1,0 +1,7 @@
+market,label,group,source,start,end,years,cost_per_side,trading_days_per_year
+SPY,S&P 500 ETF (SPY),S&P 500 ETF,"github.com/Johnbrick123/sp500-data (Yahoo, dividend-adjusted)",1995-01-03,2026-10-08,31.7,0.0005,252
+BTC,Bitcoin (BTC/USDT),Crypto,github.com/finom/static-klines (Binance BTC/USDT),2017-08-17,2026-10-08,9.2,0.001,365
+ETH,Ethereum (ETH/USDT),Crypto,github.com/finom/static-klines (Binance ETH/USDT),2017-08-17,2026-10-08,9.2,0.001,365
+ES,S&P 500 E-mini futures (ES),Futures,github.com/axb0306/cme-futures-ohlc (CME),2025-03-24,2026-04-14,1.1,0.0003,252
+GC,Gold futures (GC),Futures,github.com/axb0306/cme-futures-ohlc (CME),2025-03-24,2026-04-14,1.1,0.0003,252
+CL,Crude oil futures (CL),Futures,github.com/axb0306/cme-futures-ohlc (CME),2025-06-02,2026-04-14,0.7,0.0005,252

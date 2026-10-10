@@ -1,0 +1,27 @@
+{
+  "version": "0.2.0",
+  "capital_eur": 500,
+  "bar_minutes": 15,
+  "pattern_context_hours": 48,
+  "max_holding_hours": 48,
+  "directions": ["long", "short"],
+  "requested_markets": ["Stocks", "ETFs", "Crypto", "Forex", "Futures", "Options", "CFDs"],
+  "supported_intraday_models": ["Stocks", "ETFs", "Crypto"],
+  "execution": "Research and paper simulations only",
+  "risk": [
+    {"label": "Risk per trade", "value": "0.5% · €2.50 initially", "reason": "Limits one position's estimated stop loss and total costs."},
+    {"label": "Daily loss threshold", "value": "1.5% · €7.50 initially", "reason": "Stops new entries after the loss threshold; gaps can exceed it."},
+    {"label": "Drawdown halt", "value": "8% · €40 from initial peak", "reason": "Requires investigation before continuing research allocation."},
+    {"label": "Position cap", "value": "20% · €100 initially", "reason": "Concentrated positions cannot consume the full account."},
+    {"label": "Positions and leverage", "value": "Up to 3 · No leverage", "reason": "All five strategies share capital and portfolio limits."}
+  ],
+  "agents": [
+    {"name": "Quant developer", "task": "Generate causal signals and verify the implementation."},
+    {"name": "Quant researcher", "task": "Learn from delayed outcomes; compare frozen model versions."},
+    {"name": "Senior decision maker / skeptic", "task": "Veto unsupported expected returns, stale data and conflicting directions."},
+    {"name": "Quant trader", "task": "Check costs, shortability, sizing and shared risk budgets."}
+  ],
+  "candidates": ["SMA trend", "RSI reversal", "Bollinger reversal", "ATR range breakout", "Heikin-Ashi confirmation"],
+  "learning": "Event-driven learning updates a candidate model when authorized bars arrive. Labels mature after 48 hours. Champions stay frozen until prospective tests and explicit review pass.",
+  "limitations": "No broker or licensed intraday feed is connected. Forex and derivatives need instrument-specific models. The bundled daily ORCL results do not validate this intraday profile."
+}

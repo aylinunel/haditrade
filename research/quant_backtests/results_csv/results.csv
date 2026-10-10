@@ -1,0 +1,67 @@
+market,market_label,group,strategy,tested,reason,note,start,end,years,cagr,sharpe,max_drawdown,total_return,trades,time_in_market,bh_cagr,bh_sharpe,bh_max_drawdown,sharpe_vs_bh
+SPY,S&P 500 ETF (SPY),S&P 500 ETF,Buy & hold,yes,,,1995-01-03,2026-10-08,31.7,0.1124,0.6576,-0.5519,28.3249,1.0,1.0,0.1124,0.6576,-0.5519,0.0
+SPY,S&P 500 ETF (SPY),S&P 500 ETF,MACD oscillator,yes,,"Long when 10-day avg ≥ 21-day avg, else cash",1995-01-03,2026-10-08,31.7,0.055,0.5151,-0.2834,4.4661,185.0,0.6412,0.1124,0.6576,-0.5519,-0.1425
+SPY,S&P 500 ETF (SPY),S&P 500 ETF,Parabolic SAR,yes,,"Long while SAR is below price, else cash",1995-01-03,2026-10-08,31.7,0.016,0.1911,-0.5614,0.6541,398.0,0.6128,0.1124,0.6576,-0.5519,-0.4664
+SPY,S&P 500 ETF (SPY),S&P 500 ETF,Heikin-Ashi,yes,,Scales into up to 3 longs on repo signal,1995-01-03,2026-10-08,31.7,0.0389,0.4028,-0.3152,2.3523,415.0,0.3428,0.1124,0.6576,-0.5519,-0.2547
+SPY,S&P 500 ETF (SPY),S&P 500 ETF,Bollinger Bands W,yes,,Long on double-bottom breakout,1995-01-03,2026-10-08,31.7,0.0061,0.3097,-0.0866,0.2116,28.0,0.0344,0.1124,0.6576,-0.5519,-0.3478
+SPY,S&P 500 ETF (SPY),S&P 500 ETF,RSI pattern (H&S),yes,,Short on head-and-shoulders top,1995-01-03,2026-10-08,31.7,-0.0091,-0.1955,-0.3298,-0.2529,73.0,0.0336,0.1124,0.6576,-0.5519,-0.853
+SPY,S&P 500 ETF (SPY),S&P 500 ETF,Shooting Star,yes,,Short after confirmed shooting star,1995-01-03,2026-10-08,31.7,-0.0008,-0.1919,-0.0245,-0.0241,2.0,0.0018,0.1124,0.6576,-0.5519,-0.8495
+SPY,S&P 500 ETF (SPY),S&P 500 ETF,Dual Thrust,yes,,"Intraday long/short, flat at close",1995-01-10,2026-10-08,31.7,-0.0744,-1.1086,-0.9177,-0.9138,1817.0,0.2229,0.1122,0.6565,-0.5519,-1.7651
+SPY,S&P 500 ETF (SPY),S&P 500 ETF,London Breakout,no,Needs intraday data; US ETF market is closed at the London open,,,,,,,,,,,,,,
+SPY,S&P 500 ETF (SPY),S&P 500 ETF,Pair trading,yes,,Market-neutral: SPY vs DIA (Dow ETF),1999-01-15,2026-10-08,27.7,-0.0049,-0.6768,-0.1415,-0.1274,144.0,0.0692,0.087,0.5306,-0.5519,-1.2074
+SPY,S&P 500 ETF (SPY),S&P 500 ETF,Options straddle,no,Needs historical option prices (not freely available),,,,,,,,,,,,,,
+BTC,Bitcoin (BTC/USDT),Crypto,Buy & hold,yes,,,2017-08-17,2026-10-08,9.2,0.38,0.8204,-0.8319,18.0598,1.0,1.0,0.38,0.8204,-0.8319,0.0
+BTC,Bitcoin (BTC/USDT),Crypto,MACD oscillator,yes,,"Long when 10-day avg ≥ 21-day avg, else cash",2017-08-17,2026-10-08,9.2,0.3948,0.9474,-0.7303,20.0019,85.0,0.5449,0.38,0.8204,-0.8319,0.127
+BTC,Bitcoin (BTC/USDT),Crypto,Parabolic SAR,yes,,"Long while SAR is below price, else cash",2017-08-17,2026-10-08,9.2,0.2863,0.7883,-0.7067,9.0102,134.0,0.5249,0.38,0.8204,-0.8319,-0.0321
+BTC,Bitcoin (BTC/USDT),Crypto,Heikin-Ashi,yes,,Scales into up to 3 longs on repo signal,2017-08-17,2026-10-08,9.2,0.1642,0.6095,-0.4965,3.0192,170.0,0.4659,0.38,0.8204,-0.8319,-0.2109
+BTC,Bitcoin (BTC/USDT),Crypto,Bollinger Bands W,yes,,Long on double-bottom breakout,2017-08-17,2026-10-08,9.2,0.0711,0.8698,-0.0948,0.8743,10.0,0.0222,0.38,0.8204,-0.8319,0.0494
+BTC,Bitcoin (BTC/USDT),Crypto,RSI pattern (H&S),yes,,Short on head-and-shoulders top,2017-08-17,2026-10-08,9.2,0.0646,0.5407,-0.1685,0.773,39.0,0.059,0.38,0.8204,-0.8319,-0.2797
+BTC,Bitcoin (BTC/USDT),Crypto,Shooting Star,yes,,Short after confirmed shooting star,2017-08-17,2026-10-08,9.2,0.0,0.0,0.0,0.0,0.0,0.0,0.38,0.8204,-0.8319,-0.8204
+BTC,Bitcoin (BTC/USDT),Crypto,Dual Thrust,yes,,"Intraday long/short, flat at close",2017-08-22,2026-10-08,9.1,-0.0494,0.0344,-0.723,-0.3708,1042.0,0.3057,0.3896,0.8307,-0.8319,-0.7963
+BTC,Bitcoin (BTC/USDT),Crypto,London Breakout,yes,,Hourly data; trades the 08:00 UTC London-open breakout,2022-01-01,2026-10-08,4.8,-0.3966,-8.1202,-0.9104,-0.9103,1232.0,0.7067,0.1192,0.4754,-0.6693,-8.5955
+BTC,Bitcoin (BTC/USDT),Crypto,Pair trading,yes,,Market-neutral: BTC vs ETH,2018-04-24,2026-10-08,8.5,-0.0552,-0.7711,-0.3908,-0.3819,52.0,0.1023,0.2874,0.7228,-0.7663,-1.4939
+BTC,Bitcoin (BTC/USDT),Crypto,Options straddle,no,Needs historical option prices (not freely available),,,,,,,,,,,,,,
+ETH,Ethereum (ETH/USDT),Crypto,Buy & hold,yes,,,2017-08-17,2026-10-08,9.2,0.2583,0.7032,-0.9397,7.1865,1.0,1.0,0.2583,0.7032,-0.9397,0.0
+ETH,Ethereum (ETH/USDT),Crypto,MACD oscillator,yes,,"Long when 10-day avg ≥ 21-day avg, else cash",2017-08-17,2026-10-08,9.2,0.49,0.954,-0.6918,37.442,85.0,0.5123,0.2583,0.7032,-0.9397,0.2508
+ETH,Ethereum (ETH/USDT),Crypto,Parabolic SAR,yes,,"Long while SAR is below price, else cash",2017-08-17,2026-10-08,9.2,0.1332,0.5041,-0.8777,2.1408,127.0,0.4946,0.2583,0.7032,-0.9397,-0.1991
+ETH,Ethereum (ETH/USDT),Crypto,Heikin-Ashi,yes,,Scales into up to 3 longs on repo signal,2017-08-17,2026-10-08,9.2,-0.0133,0.2036,-0.8328,-0.1155,153.0,0.4569,0.2583,0.7032,-0.9397,-0.4996
+ETH,Ethereum (ETH/USDT),Crypto,Bollinger Bands W,yes,,Long on double-bottom breakout,2017-08-17,2026-10-08,9.2,0.0134,0.1753,-0.2403,0.1291,3.0,0.0216,0.2583,0.7032,-0.9397,-0.5279
+ETH,Ethereum (ETH/USDT),Crypto,RSI pattern (H&S),yes,,Short on head-and-shoulders top,2017-08-17,2026-10-08,9.2,-0.0496,-0.3535,-0.4642,-0.372,25.0,0.0314,0.2583,0.7032,-0.9397,-1.0567
+ETH,Ethereum (ETH/USDT),Crypto,Shooting Star,yes,,Short after confirmed shooting star,2017-08-17,2026-10-08,9.2,0.0,0.0,0.0,0.0,0.0,0.0,0.2583,0.7032,-0.9397,-0.7032
+ETH,Ethereum (ETH/USDT),Crypto,Dual Thrust,yes,,"Intraday long/short, flat at close",2017-08-22,2026-10-08,9.1,-0.0065,0.2161,-0.69,-0.0575,1025.0,0.3003,0.2552,0.7004,-0.9397,-0.4842
+ETH,Ethereum (ETH/USDT),Crypto,London Breakout,yes,,Hourly data; trades the 08:00 UTC London-open breakout,2022-01-01,2026-10-08,4.8,-0.4043,-8.301,-0.9157,-0.9156,1217.0,0.698,-0.0844,0.2134,-0.7401,-8.5144
+ETH,Ethereum (ETH/USDT),Crypto,Pair trading,yes,,Market-neutral: ETH vs BTC,2018-04-24,2026-10-08,8.5,-0.0361,-0.61,-0.3089,-0.2675,54.0,0.1052,0.1604,0.5989,-0.8978,-1.2089
+ETH,Ethereum (ETH/USDT),Crypto,Options straddle,no,Needs historical option prices (not freely available),,,,,,,,,,,,,,
+ES,S&P 500 E-mini futures (ES),Futures,Buy & hold,yes,,,2025-03-24,2026-04-14,1.1,0.1897,1.021,-0.1406,0.2046,1.0,1.0,0.1897,1.021,-0.1406,0.0
+ES,S&P 500 E-mini futures (ES),Futures,MACD oscillator,yes,,"Long when 10-day avg ≥ 21-day avg, else cash",2025-03-24,2026-04-14,1.1,0.179,1.7439,-0.0483,0.193,6.0,0.6519,0.1897,1.021,-0.1406,0.7229
+ES,S&P 500 E-mini futures (ES),Futures,Parabolic SAR,yes,,"Long while SAR is below price, else cash",2025-03-24,2026-04-14,1.1,0.0662,0.6435,-0.1126,0.0711,16.0,0.6259,0.1897,1.021,-0.1406,-0.3775
+ES,S&P 500 E-mini futures (ES),Futures,Heikin-Ashi,yes,,Scales into up to 3 longs on repo signal,2025-03-24,2026-04-14,1.1,0.0643,0.5313,-0.1029,0.0691,12.0,0.2926,0.1897,1.021,-0.1406,-0.4897
+ES,S&P 500 E-mini futures (ES),Futures,Bollinger Bands W,yes,,Long on double-bottom breakout,2025-03-24,2026-04-14,1.1,0.0,0.0,0.0,0.0,1.0,0.0,0.1897,1.021,-0.1406,-1.021
+ES,S&P 500 E-mini futures (ES),Futures,RSI pattern (H&S),yes,,Short on head-and-shoulders top,2025-03-24,2026-04-14,1.1,-0.0054,-0.1588,-0.0264,-0.0057,1.0,0.0185,0.1897,1.021,-0.1406,-1.1798
+ES,S&P 500 E-mini futures (ES),Futures,Shooting Star,yes,,Short after confirmed shooting star,2025-03-24,2026-04-14,1.1,0.0,0.0,0.0,0.0,0.0,0.0,0.1897,1.021,-0.1406,-1.021
+ES,S&P 500 E-mini futures (ES),Futures,Dual Thrust,yes,,"Intraday long/short, flat at close",2025-03-31,2026-04-14,1.1,-0.1437,-1.47,-0.2091,-0.1505,88.0,0.3111,0.2275,1.1907,-0.1164,-2.6607
+ES,S&P 500 E-mini futures (ES),Futures,London Breakout,yes,,Hourly data; trades the 08:00 UTC London-open breakout,2025-03-24,2026-04-14,1.1,-0.1255,-2.821,-0.1443,-0.1339,202.0,0.737,0.1897,1.021,-0.1406,-3.842
+ES,S&P 500 E-mini futures (ES),Futures,Pair trading,no,Only 270 days of data; needs 250 to fit the model plus a test period,,,,,,,,,,,,,,
+ES,S&P 500 E-mini futures (ES),Futures,Options straddle,no,Needs historical option prices (not freely available),,,,,,,,,,,,,,
+GC,Gold futures (GC),Futures,Buy & hold,yes,,,2025-03-24,2026-04-14,1.1,0.5557,1.6547,-0.1966,0.6028,1.0,1.0,0.5557,1.6547,-0.1966,0.0
+GC,Gold futures (GC),Futures,MACD oscillator,yes,,"Long when 10-day avg ≥ 21-day avg, else cash",2025-03-24,2026-04-14,1.1,0.1827,0.8461,-0.1408,0.1962,9.0,0.6283,0.5557,1.6547,-0.1966,-0.8085
+GC,Gold futures (GC),Futures,Parabolic SAR,yes,,"Long while SAR is below price, else cash",2025-03-24,2026-04-14,1.1,0.2162,1.014,-0.1144,0.2324,12.0,0.5725,0.5557,1.6547,-0.1966,-0.6407
+GC,Gold futures (GC),Futures,Heikin-Ashi,yes,,Scales into up to 3 longs on repo signal,2025-03-24,2026-04-14,1.1,0.0557,0.5692,-0.138,0.0596,13.0,0.3309,0.5557,1.6547,-0.1966,-1.0855
+GC,Gold futures (GC),Futures,Bollinger Bands W,yes,,Long on double-bottom breakout,2025-03-24,2026-04-14,1.1,0.0,0.0,0.0,0.0,0.0,0.0,0.5557,1.6547,-0.1966,-1.6547
+GC,Gold futures (GC),Futures,RSI pattern (H&S),yes,,Short on head-and-shoulders top,2025-03-24,2026-04-14,1.1,-0.0287,-0.6435,-0.0307,-0.0307,4.0,0.0632,0.5557,1.6547,-0.1966,-2.2981
+GC,Gold futures (GC),Futures,Shooting Star,yes,,Short after confirmed shooting star,2025-03-24,2026-04-14,1.1,0.0,0.0,0.0,0.0,0.0,0.0,0.5557,1.6547,-0.1966,-1.6547
+GC,Gold futures (GC),Futures,Dual Thrust,yes,,"Intraday long/short, flat at close",2025-03-31,2026-04-14,1.0,0.0031,0.0834,-0.0997,0.0032,51.0,0.1896,0.4588,1.4636,-0.1966,-1.3803
+GC,Gold futures (GC),Futures,London Breakout,no,No intraday data,,,,,,,,,,,,,,
+GC,Gold futures (GC),Futures,Pair trading,no,No obvious cointegrated partner in the free data,,,,,,,,,,,,,,
+GC,Gold futures (GC),Futures,Options straddle,no,Needs historical option prices (not freely available),,,,,,,,,,,,,,
+CL,Crude oil futures (CL),Futures,Buy & hold,yes,,,2025-06-02,2026-04-14,0.7,0.6982,1.2631,-0.2705,0.4598,1.0,1.0,0.6982,1.2631,-0.2705,0.0
+CL,Crude oil futures (CL),Futures,MACD oscillator,yes,,"Long when 10-day avg ≥ 21-day avg, else cash",2025-06-02,2026-04-14,0.7,0.7332,1.4659,-0.1824,0.4812,5.0,0.4444,0.6982,1.2631,-0.2705,0.2028
+CL,Crude oil futures (CL),Futures,Parabolic SAR,yes,,"Long while SAR is below price, else cash",2025-06-02,2026-04-14,0.7,0.4462,1.0496,-0.2473,0.3015,7.0,0.4611,0.6982,1.2631,-0.2705,-0.2135
+CL,Crude oil futures (CL),Futures,Heikin-Ashi,yes,,Scales into up to 3 longs on repo signal,2025-06-02,2026-04-14,0.7,0.2219,2.1224,-0.0606,0.1539,8.0,0.3,0.6982,1.2631,-0.2705,0.8593
+CL,Crude oil futures (CL),Futures,Bollinger Bands W,yes,,Long on double-bottom breakout,2025-06-02,2026-04-14,0.7,-0.0288,-0.5966,-0.0303,-0.0207,1.0,0.0389,0.6982,1.2631,-0.2705,-1.8598
+CL,Crude oil futures (CL),Futures,RSI pattern (H&S),yes,,Short on head-and-shoulders top,2025-06-02,2026-04-14,0.7,0.0475,0.6329,-0.0254,0.0337,1.0,0.0111,0.6982,1.2631,-0.2705,-0.6302
+CL,Crude oil futures (CL),Futures,Shooting Star,yes,,Short after confirmed shooting star,2025-06-02,2026-04-14,0.7,0.0,0.0,0.0,0.0,0.0,0.0,0.6982,1.2631,-0.2705,-1.2631
+CL,Crude oil futures (CL),Futures,Dual Thrust,yes,,"Intraday long/short, flat at close",2025-06-09,2026-04-14,0.7,-0.5284,-0.7371,-0.5305,-0.4067,61.0,0.3222,0.636,1.1842,-0.2705,-1.9212
+CL,Crude oil futures (CL),Futures,London Breakout,no,No intraday data,,,,,,,,,,,,,,
+CL,Crude oil futures (CL),Futures,Pair trading,no,No obvious cointegrated partner in the free data,,,,,,,,,,,,,,
+CL,Crude oil futures (CL),Futures,Options straddle,no,Needs historical option prices (not freely available),,,,,,,,,,,,,,

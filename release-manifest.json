@@ -1,0 +1,14 @@
+{
+  "version": "1.0.0",
+  "based_on": ["strategy-city 0.2.0", "quant_backtests"],
+  "backend_tests_passed": 110,
+  "legacy_backtests_regenerated_identically": true,
+  "web_typecheck_lint_build": "passed",
+  "web_headless_chromium_check": "passed (dark, light, 400px; no console errors)",
+  "native_typecheck": "passed",
+  "native_lint": "passed",
+  "ios_android_javascript_exports": "passed",
+  "live_execution": false,
+  "broker_client_present": false,
+  "llm_required": false
+}
